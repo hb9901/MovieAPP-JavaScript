@@ -1,7 +1,11 @@
-import Component from "../../core/Component.js";
+import Component from "../core/Component.js";
 
-export default class ItemAppender extends Component {
+export default class Header extends Component {
   template() {
-    return `<div id="header" class="header">내배캠 최고 평점 영화 콜렉션</div>`;
+    return `
+        <h2 class="headerTitle">내배캠 최고 평점 영화</h2>
+      `;
   }
+
+  setEvent() {}
 }

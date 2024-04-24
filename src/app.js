@@ -1,14 +1,16 @@
-import Component from "./core/Component.js";
+import Component from "./component/core/Component.js";
 import Header from "./component/header/Header.js";
 
-export class App extends Component {
+export default class App extends Component {
   template() {
     return `
-      ${Header}
+     <header id="movieHeader"></header>
     `;
   }
 
-  setEvent() {
+  mounted() {
     const { $el } = this;
+    const $header = $el.querySelector("#movieHeader");
+    new Header($header);
   }
 }
