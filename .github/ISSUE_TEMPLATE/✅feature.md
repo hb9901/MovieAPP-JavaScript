@@ -1,6 +1,6 @@
 ---
-name: "[REFACTOR]"
-about: REFACTOR 작업 상황을 작성해주세요
+name: "✅FEATURE"
+about: Feature 작업 상황을 작성해주세요
 title: ''
 labels: ''
 assignees: ''
@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 ## Description
-### 어떤 코드를 리팩토링중인지 작성해주세요.
+### 무슨 기능을 작업중인지 작성해주세요.
 
 ## To-Do
 - [ ] todo1

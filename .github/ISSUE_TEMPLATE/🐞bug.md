@@ -1,6 +1,6 @@
 ---
-name: "[FEATURE]"
-about: Feature 작업 상황을 작성해주세요
+name: "\U0001F41EBUG"
+about: 버그 발생시 작성해주세요
 title: ''
 labels: ''
 assignees: ''
@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 ## Description
-### 무슨 기능을 작업중인지 작성해주세요.
+### 무슨 버그인지 설명을 적어주세요
 
 ## To-Do
 - [ ] todo1

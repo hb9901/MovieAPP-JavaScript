@@ -1,6 +1,6 @@
 ---
-name: "[BUG]"
-about: 버그 발생시 작성해주세요
+name: "⚒️ REFACTOR"
+about: REFACTOR 작업 상황을 작성해주세요
 title: ''
 labels: ''
 assignees: ''
@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 ## Description
-### 무슨 버그인지 설명을 적어주세요
+### 어떤 코드를 리팩토링중인지 작성해주세요.
 
 ## To-Do
 - [ ] todo1
