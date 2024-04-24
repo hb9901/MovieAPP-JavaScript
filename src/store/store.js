@@ -1,7 +1,9 @@
-import { observable } from "..//core/observer.js";
+import { observable } from "../component/core/observer.js";
 
 export const store = {
-  state: observable({}),
+  state: observable({
+    searchContent: "",
+  }),
 
   setState(newState) {
     for (const [key, value] of Object.entries(newState)) {
