@@ -3,6 +3,7 @@ import { observable } from "../component/core/observer.js";
 export const store = {
   state: observable({
     searchContent: "",
+    movieList: [],
   }),
 
   setState(newState) {
