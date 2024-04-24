@@ -1,6 +1,6 @@
 import { observable, observe } from "./observer.js";
 
-export class Component {
+export default class Component {
   state;
   props;
   $el;
