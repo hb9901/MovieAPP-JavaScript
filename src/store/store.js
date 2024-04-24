@@ -2,7 +2,7 @@ import { observable } from "../component/core/observer.js";
 
 export const store = {
   state: observable({
-    page: 1,
+    searchContent: "",
   }),
 
   setState(newState) {
