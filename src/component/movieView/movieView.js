@@ -16,12 +16,15 @@ export default class MovieView extends Component {
   }
   mounted() {
     const { $el } = this;
+
+    console.log(store.state.movieList);
+
     store.state.movieList.forEach(
-      ({ backdrop_path, title, overview, vote_average, id }) => {
+      ({ poster_path, original_title, overview, vote_average, id }) => {
         const $view = $el.querySelector(`#movieCard-${id}`);
         new Card($view, {
-          src: backdrop_path,
-          title: title,
+          src: poster_path,
+          title: original_title,
           content: overview,
           rating: vote_average,
           id: id,

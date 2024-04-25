@@ -7,7 +7,7 @@ export default class Card extends Component {
 
     return `
         <div id="cardMain" class="cardMain">
-            <img id="cardImg" class="cardImg" src="https://image.tmdb.org/t/p/w500/${src}"/>
+            <img id="cardImg" class="cardImg" src="https://image.tmdb.org/t/p/w500/${src}" alt="영화 포스터"/>
             <div id="cardTitle" class="cardTitle">${title}</div>
             <div id="cardContent" class="cardContent">${content}</div>
             <div id="cardRating" calss="cardRating">Rating:${rating}</div>
