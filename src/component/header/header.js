@@ -4,8 +4,10 @@ import SearchView from "./searchView/searchView.js";
 export default class Header extends Component {
   template() {
     return `
-        <h2 class="headerTitle">내배캠 최고 평점 영화 콜렉션</h2>
+      <div id="headerContainer">
+        <h2 class="headerTitle">MOVIE with 내배캠</h2>
         <div id="searchBar"></div>
+      </div>
       `;
   }
 
