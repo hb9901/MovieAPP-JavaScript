@@ -20,7 +20,11 @@ export default class SearchView extends Component {
       let data = await fetchGet(
         `https://api.themoviedb.org/3/search/movie?api_key=${MOVIE_API_KEY}&language=ko-KR&query=${searchInput.value}&page=1&include_adult=false`
       );
-      store.setState({ movieList: data.results });
+      if (data.results.length !== 0) {
+        store.setState({ movieList: data.results });
+      } else {
+        alert("해당하는 영화가 없습니다!");
+      }
     });
 
     searchInput.addEventListener("keyup", function makeEnterClick(event) {
