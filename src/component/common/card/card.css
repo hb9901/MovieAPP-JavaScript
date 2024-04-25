@@ -3,6 +3,8 @@
   flex-direction: column;
   align-items: center;
   background-color: #10171e;
+
+  cursor: pointer;
 }
 
 #cardImgWrapper {
