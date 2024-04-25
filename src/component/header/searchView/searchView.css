@@ -1,0 +1,27 @@
+#searchTitle {
+  color: #888b8e;
+  font-weight: bold;
+
+  margin-right: 20px;
+}
+
+#searchInput {
+  width: 400px;
+  height: 30px;
+
+  margin-right: 10px;
+
+  border: none;
+  border-radius: 5px;
+  background-color: #10161d;
+  color: white;
+}
+
+#searchBtn {
+  color: #888b8e;
+
+  height: 30px;
+
+  border-radius: 5px;
+  background-color: #10161d;
+}

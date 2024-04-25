@@ -1,0 +1,9 @@
+#movieContainer {
+  display: flex;
+  gap: 20px 2%;
+  flex-wrap: wrap;
+}
+
+#movieContainer > div {
+  width: 32%;
+}

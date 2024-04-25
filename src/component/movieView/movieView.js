@@ -5,6 +5,7 @@ import Component from "../core/Component.js";
 export default class MovieView extends Component {
   template() {
     return `
+    <div id="movieContainer" class="movieContainer">
     ${store.state.movieList
       .map(
         ({ id }) => `
@@ -12,7 +13,8 @@ export default class MovieView extends Component {
       `
       )
       .join("")}
-        `;
+      </div>  
+      `;
   }
   mounted() {
     const { $el } = this;
