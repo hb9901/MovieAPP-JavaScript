@@ -11,16 +11,16 @@ export default class SearchView extends Component {
         <button id="searchBtn" class="searchBtn">검색</button>
       `;
   }
-  async setEvent() {
+  setEvent() {
     const { $el } = this;
-    const search = $el.querySelector("#searchInput");
+    const searchInput = $el.querySelector("#searchInput");
+    const searchBtn = $el.querySelector("#searchBtn");
 
-    $el.querySelector("#searchBtn").addEventListener("click", () => {
-      fetchGet(
-        `https://api.themoviedb.org/3/search/movie?api_key=${MOVIE_API_KEY}&language=ko-KR&query=${search.value}&page=1&include_adult=false`
-      ).then((res) => {
-        store.setState({ movieList: res.results });
-      });
+    searchBtn.addEventListener("click", async function updateStore() {
+      let data = await fetchGet(
+        `https://api.themoviedb.org/3/search/movie?api_key=${MOVIE_API_KEY}&language=ko-KR&query=${searchInput.value}&page=1&include_adult=false`
+      );
+      store.setState({ movieList: data.results });
     });
   }
 }
