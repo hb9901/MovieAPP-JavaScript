@@ -7,7 +7,7 @@ export default class SearchView extends Component {
   template() {
     return `
         <div id="searchTitle" class="searchTitle">영화 검색:</div>
-        <input type="text" id="searchInput" placeholder="영화 제목을 검색해 보세요"" />
+        <input type="text" id="searchInput" placeholder="영화 제목을 검색해 보세요"" autofocus />
         <button id="searchBtn" class="searchBtn">검색</button>
       `;
   }
