@@ -22,5 +22,12 @@ export default class SearchView extends Component {
       );
       store.setState({ movieList: data.results });
     });
+
+    searchInput.addEventListener("keyup", function makeEnterClick(event) {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        searchBtn.click();
+      }
+    });
   }
 }
