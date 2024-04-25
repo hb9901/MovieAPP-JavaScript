@@ -17,8 +17,6 @@ export default class MovieView extends Component {
   mounted() {
     const { $el } = this;
 
-    console.log(store.state.movieList);
-
     store.state.movieList.forEach(
       ({ poster_path, original_title, overview, vote_average, id }) => {
         const $view = $el.querySelector(`#movieCard-${id}`);
