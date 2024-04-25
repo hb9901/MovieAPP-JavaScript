@@ -7,7 +7,7 @@ export default class Card extends Component {
     return `
         <div id="cardMain" class="cardMain">
             <div id="cardImgWrapper" class="cardImgWrapper">
-              <img id="cardImg" class="cardImg" src="https://image.tmdb.org/t/p/w500/${src}" alt="영화 포스터"/>
+              <img id="cardImg" class="cardImg" src="https://image.tmdb.org/t/p/w500/${src}" onerror="this.onerror=null; this.src='https://cdn.pixabay.com/photo/2014/04/03/11/07/clapperboard-311792_1280.png';"/>
             </div>
             <div id="cardTitle" class="cardTitle">${title}</div>
             <div id="cardContent" class="cardContent">${content}</div>
