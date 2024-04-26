@@ -22,6 +22,10 @@
   <li>영화 ID Alert</li>
   <br/>
 
-![검색기능](https://github.com/hb9901/MovieAPP-JavaScript/assets/50387658/adeaa857-f6b0-480b-8382-d4e24ee3ddae)z
+![검색기능](https://github.com/hb9901/MovieAPP-JavaScript/assets/50387658/adeaa857-f6b0-480b-8382-d4e24ee3ddae)
 
+  <li>Pagination</li>
+  <br/>
+
+![pagination](https://github.com/hb9901/MovieAPP-JavaScript/assets/50387658/bf8a0c46-40a2-40c1-a629-00373cc63466)
 </div>
