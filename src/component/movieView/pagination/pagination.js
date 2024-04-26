@@ -11,14 +11,14 @@ export default class Pagination extends Component {
     <button id="nextBtn" class="nextBtn"> > </button> 
       `;
   }
-  mounted() {
+  setEvent() {
     const { $el } = this;
     const $backBtn = $el.querySelector("#backBtn");
     const $nextBtn = $el.querySelector("#nextBtn");
     const curPage = store.state.page;
     const backPage = curPage - 1;
     const nextPage = curPage + 1;
-    console.log(typeof "");
+
     let URL = store.state.searchValue
       ? `https://api.themoviedb.org/3/search/movie?api_key=${MOVIE_API_KEY}&language=ko-KR&query=${store.state.searchValue}&include_adult=false`
       : `https://api.themoviedb.org/3/movie/top_rated?api_key=${MOVIE_API_KEY}&language=ko-KO`;
