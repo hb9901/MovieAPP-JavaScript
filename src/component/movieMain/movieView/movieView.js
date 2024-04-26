@@ -1,7 +1,6 @@
-import { store } from "../../store/store.js";
-import Component from "../core/Component.js";
-import Card from "../common/card/card.js";
-import Pagination from "./pagination/pagination.js";
+import { store } from "../../../store/store.js";
+import Component from "../../core/Component.js";
+import Card from "../../common/card/card.js";
 
 export default class MovieView extends Component {
   template() {
@@ -15,12 +14,10 @@ export default class MovieView extends Component {
       )
       .join("")}
       </div>
-      <div id="moviePagination" class="moviePagination"></div>  
       `;
   }
   mounted() {
     const { $el } = this;
-    const $pagination = $el.querySelector("#moviePagination");
 
     store.state.movieList.forEach(
       ({ poster_path, original_title, overview, vote_average, id }) => {
@@ -34,6 +31,5 @@ export default class MovieView extends Component {
         });
       }
     );
-    new Pagination($pagination);
   }
 }

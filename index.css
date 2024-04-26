@@ -1,7 +1,7 @@
 @import url("src/App.css");
 @import url("src/component/header/Header.css");
 @import url("src/component/header/searchView/SearchView.css");
-@import url("src/component/movieView/MovieView.css");
+@import url("src/component/movieMain/movieView/movieView.css");
 @import url("src/component/common/card/Card.css");
 
 #app {
