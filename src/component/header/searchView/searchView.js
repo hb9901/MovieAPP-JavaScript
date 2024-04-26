@@ -13,24 +13,28 @@ export default class SearchView extends Component {
   }
   setEvent() {
     const { $el } = this;
-    const searchInput = $el.querySelector("#searchInput");
-    const searchBtn = $el.querySelector("#searchBtn");
+    const $searchInput = $el.querySelector("#searchInput");
+    const $searchBtn = $el.querySelector("#searchBtn");
 
-    searchBtn.addEventListener("click", async function updateStore() {
+    $searchBtn.addEventListener("click", async function updateStore() {
       let data = await fetchGet(
-        `https://api.themoviedb.org/3/search/movie?api_key=${MOVIE_API_KEY}&language=ko-KR&query=${searchInput.value}&page=1&include_adult=false`
+        `https://api.themoviedb.org/3/search/movie?api_key=${MOVIE_API_KEY}&language=ko-KR&query=${$searchInput.value}&page=1&include_adult=false`
       );
       if (data.results.length !== 0) {
-        store.setState({ movieList: data.results });
+        store.setState({
+          movieList: data.results,
+          searchValue: $searchInput.value,
+          page: 1,
+        });
       } else {
         alert("해당하는 영화가 없습니다!");
       }
     });
 
-    searchInput.addEventListener("keyup", function makeEnterClick(event) {
+    $searchInput.addEventListener("keyup", function makeEnterClick(event) {
       if (event.keyCode === 13) {
         event.preventDefault();
-        searchBtn.click();
+        $searchBtn.click();
       }
     });
   }

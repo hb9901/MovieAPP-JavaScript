@@ -1,6 +1,6 @@
-import { store } from "../../store/store.js";
-import Card from "../common/card/Card.js";
-import Component from "../core/Component.js";
+import { store } from "../../../store/store.js";
+import Component from "../../core/Component.js";
+import Card from "../../common/card/card.js";
 
 export default class MovieView extends Component {
   template() {
@@ -13,7 +13,7 @@ export default class MovieView extends Component {
       `
       )
       .join("")}
-      </div>  
+      </div>
       `;
   }
   mounted() {

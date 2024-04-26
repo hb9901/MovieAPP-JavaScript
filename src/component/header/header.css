@@ -13,6 +13,8 @@
   align-items: center;
 
   color: #e8bd22;
+
+  cursor: pointer;
 }
 
 #searchBar {
