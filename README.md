@@ -14,12 +14,12 @@
 <hr>
 <h2>주요 기능</h2>
 <div>
-  <li>영화 ID Alert</li>
+  <li>영화 검색 기능</li>
   <br/>
   
   ![클릭 이벤트](https://github.com/hb9901/MovieAPP-JavaScript/assets/50387658/1dfbab36-9808-41e6-b9d6-bbfc34b712b1)
 
-  <li>영화 검색 기능</li>
+  <li>영화 ID Alert</li>
   <br/>
 
   ![검색기능](https://github.com/hb9901/MovieAPP-JavaScript/assets/50387658/adeaa857-f6b0-480b-8382-d4e24ee3ddae)
