@@ -21,7 +21,7 @@ export default class Header extends Component {
     $headerTitle.addEventListener("click", async function minusStorePage() {
       const data = await fetchGet(TOR_RATED_URL);
       if (data.results.length !== 0) {
-        store.setState({ movieList: data.results, searchVlaue: "", page: 1 });
+        store.setState({ movieList: data.results, searchValue: "", page: 1 });
       } else {
         alert("해당하는 영화가 없습니다!");
       }
