@@ -8,7 +8,14 @@
 
   padding-top: 30px;
   padding-bottom: 30px;
+  margin-bottom: 20px;
+  margin-top: 20px;
   border-radius: 10px;
+}
+
+#cardMain:hover {
+  transition: all 0.4s;
+  scale: 105%;
 }
 
 #cardImgWrapper {
@@ -26,7 +33,11 @@
 #cardTitle {
   font-size: 30px;
 
+  width: 80%;
+
+  white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 #cardContent {
