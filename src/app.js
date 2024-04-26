@@ -1,6 +1,6 @@
 import Component from "./component/core/Component.js";
 import Header from "./component/header/header.js";
-import MovieView from "./component/movieView/MovieView.js";
+import MovieView from "./component/movieView/movieView.js";
 import { store } from "./store/store.js";
 import fetchGet from "./utils/apis/fetchGet.js";
 import { TOR_RATED_URL } from "../constants/constants.js";

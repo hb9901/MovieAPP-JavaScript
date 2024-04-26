@@ -1,5 +1,5 @@
 import { store } from "../../store/store.js";
-import Card from "../common/card/Card.js";
+import Card from "../common/card/card.js";
 import Component from "../core/Component.js";
 
 export default class MovieView extends Component {
