@@ -10,8 +10,10 @@ export default class Card extends Component {
               <img id="cardImg" class="cardImg" src="https://image.tmdb.org/t/p/w500/${src}" onerror="this.onerror=null; this.src='https://cdn.pixabay.com/photo/2014/04/03/11/07/clapperboard-311792_1280.png';"/>
             </div>
             <div id="cardTitle" class="cardTitle">${title}</div>
+            <br/>
             <div id="cardContent" class="cardContent">${content}</div>
-            <div id="cardRating" calss="cardRating">Rating:${rating}</div>
+            <br/>
+            <div id="cardRating" calss="cardRating">Rating: ${rating}</div>
         </div>
          `;
   }
