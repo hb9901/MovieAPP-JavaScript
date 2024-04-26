@@ -6,10 +6,12 @@ import fetchGet from "../../../utils/apis/fetchGet.js";
 export default class Pagination extends Component {
   template() {
     return `
-    <button id="backBtn" class="backBtn"> < </button>
-    <div id="paginationContainer" class="paginationContainer">${store.state.page}</div> 
-    <button id="nextBtn" class="nextBtn"> > </button> 
-      `;
+    <div id="paginationContainer" class="paginationContainer">
+      <button id="backBtn" class="Btn"> < </button>
+      <div id="paginationContainer" class="paginationContainer">${store.state.page}</div> 
+      <button id="nextBtn" class="Btn"> > </button> 
+    </div>
+    `;
   }
   setEvent() {
     const { $el } = this;
