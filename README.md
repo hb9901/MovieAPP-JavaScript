@@ -22,5 +22,6 @@
   <li>영화 검색 기능</li>
   <br/>
 
-  ![검색기능](https://github.com/hb9901/MovieAPP-JavaScript/assets/50387658/adeaa857-f6b0-480b-8382-d4e24ee3ddae)
+![검색기능](https://github.com/hb9901/MovieAPP-JavaScript/assets/50387658/adeaa857-f6b0-480b-8382-d4e24ee3ddae)z
+
 </div>
