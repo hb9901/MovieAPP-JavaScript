@@ -1,9 +1,11 @@
 #movieContainer {
   display: flex;
-  gap: 20px 2%;
+
+  padding: 5%;
+  gap: 5%;
   flex-wrap: wrap;
 }
 
 #movieContainer > div {
-  width: 32%;
+  width: 30%;
 }
