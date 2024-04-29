@@ -1,7 +1,8 @@
 import Component from "../../core/Component.js";
 import { store } from "../../../store/store.js";
 import fetchGet from "../../../utils/apis/fetchGet.js";
-import { MOVIE_API_KEY } from "../../../../constants/constants.js";
+import { SEARCH_URL } from "../../../../constants/constants.js";
+import { checkDataExists } from "../../../utils/functions/functions.js";
 
 export default class SearchView extends Component {
   template() {
@@ -17,17 +18,14 @@ export default class SearchView extends Component {
     const $searchBtn = $el.querySelector("#searchBtn");
 
     $searchBtn.addEventListener("click", async function updateStore() {
-      let data = await fetchGet(
-        `https://api.themoviedb.org/3/search/movie?api_key=${MOVIE_API_KEY}&language=ko-KR&query=${$searchInput.value}&page=1&include_adult=false`
-      );
-      if (data.results.length !== 0) {
+      let data = await fetchGet(`${SEARCH_URL}&query=${$searchInput.value}`);
+      if (checkDataExists(data.results)) {
         store.setState({
           movieList: data.results,
           searchValue: $searchInput.value,
-          page: 1,
+          page: 1
         });
-      } else {
-        alert("해당하는 영화가 없습니다!");
+        window.scrollTo(0, 0);
       }
     });
 

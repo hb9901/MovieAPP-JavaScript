@@ -1,6 +1,6 @@
 import Component from "../core/Component.js";
 import SearchView from "./searchView/searchView.js";
-import { TOR_RATED_URL } from "../../../constants/constants.js";
+import { TOP_RATED_URL } from "../../../constants/constants.js";
 import fetchGet from "../../utils/apis/fetchGet.js";
 import { store } from "../../store/store.js";
 
@@ -18,13 +18,10 @@ export default class Header extends Component {
     const { $el } = this;
     const $headerTitle = $el.querySelector("#headerTitle");
 
-    $headerTitle.addEventListener("click", async function minusStorePage() {
-      const data = await fetchGet(TOR_RATED_URL);
-      if (data.results.length !== 0) {
-        store.setState({ movieList: data.results, searchValue: "", page: 1 });
-      } else {
-        alert("해당하는 영화가 없습니다!");
-      }
+    $headerTitle.addEventListener("click", async function resetPage() {
+      const data = await fetchGet(TOP_RATED_URL);
+      store.setState({ movieList: data.results, searchValue: "", page: 1 });
+      window.scrollTo(0, 0);
     });
   }
 
