@@ -6,6 +6,7 @@ export default function fetchGet(url) {
       if (response.ok) {
         return response.json();
       }
+      alert("해당하는 데이터가 없습니다!");
       throw new Error("에러 발생");
     })
     .catch((error) => {
