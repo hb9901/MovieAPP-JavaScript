@@ -1,5 +1,7 @@
+import { OPTIONS } from "../../../constants/constants.js";
+
 export default function fetchGet(url) {
-  let APIData = fetch(url)
+  let APIData = fetch(url, OPTIONS)
     .then((response) => {
       if (response.ok) {
         return response.json();

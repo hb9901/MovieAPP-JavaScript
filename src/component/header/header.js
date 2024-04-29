@@ -1,6 +1,6 @@
 import Component from "../core/Component.js";
 import SearchView from "./searchView/searchView.js";
-import { TOR_RATED_URL } from "../../../constants/constants.js";
+import { TOP_RATED_URL } from "../../../constants/constants.js";
 import fetchGet from "../../utils/apis/fetchGet.js";
 import { store } from "../../store/store.js";
 
@@ -19,7 +19,7 @@ export default class Header extends Component {
     const $headerTitle = $el.querySelector("#headerTitle");
 
     $headerTitle.addEventListener("click", async function minusStorePage() {
-      const data = await fetchGet(TOR_RATED_URL);
+      const data = await fetchGet(TOP_RATED_URL);
       if (data.results.length !== 0) {
         store.setState({ movieList: data.results, searchValue: "", page: 1 });
       } else {

@@ -1,6 +1,6 @@
 import { store } from "../../../store/store.js";
 import Component from "../../core/Component.js";
-import { MOVIE_API_KEY } from "../../../../constants/constants.js";
+import { SEARCH_URL, TOP_RATED_URL } from "../../../../constants/constants.js";
 import fetchGet from "../../../utils/apis/fetchGet.js";
 
 export default class Pagination extends Component {
@@ -21,9 +21,7 @@ export default class Pagination extends Component {
     const backPage = curPage - 1;
     const nextPage = curPage + 1;
 
-    let URL = store.state.searchValue
-      ? `https://api.themoviedb.org/3/search/movie?api_key=${MOVIE_API_KEY}&language=ko-KR&query=${store.state.searchValue}&include_adult=false`
-      : `https://api.themoviedb.org/3/movie/top_rated?api_key=${MOVIE_API_KEY}&language=ko-KO`;
+    let URL = store.state.searchValue ? `${SEARCH_URL}&query=${store.state.searchValue}` : TOP_RATED_URL;
 
     $backBtn.addEventListener("click", async function minusStorePage() {
       let data = await fetchGet(URL + `&page=${backPage}`);
