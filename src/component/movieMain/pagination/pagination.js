@@ -28,6 +28,7 @@ export default class Pagination extends Component {
       let data = await fetchGet(URL + `&page=${backPage}`);
       if (checkDataExists(data.results)) {
         store.setState({ movieList: data.results, page: backPage });
+        window.scrollTo(0, 0);
       }
     });
 
@@ -35,6 +36,7 @@ export default class Pagination extends Component {
       let data = await fetchGet(URL + `&page=${nextPage}`);
       if (checkDataExists(data.results)) {
         store.setState({ movieList: data.results, page: nextPage });
+        window.scrollTo(0, 0);
       }
     });
   }

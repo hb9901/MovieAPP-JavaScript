@@ -25,6 +25,7 @@ export default class SearchView extends Component {
           searchValue: $searchInput.value,
           page: 1
         });
+        window.scrollTo(0, 0);
       }
     });
 

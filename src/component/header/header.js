@@ -21,6 +21,7 @@ export default class Header extends Component {
     $headerTitle.addEventListener("click", async function resetPage() {
       const data = await fetchGet(TOP_RATED_URL);
       store.setState({ movieList: data.results, searchValue: "", page: 1 });
+      window.scrollTo(0, 0);
     });
   }
 
