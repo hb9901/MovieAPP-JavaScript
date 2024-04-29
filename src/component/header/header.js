@@ -18,13 +18,9 @@ export default class Header extends Component {
     const { $el } = this;
     const $headerTitle = $el.querySelector("#headerTitle");
 
-    $headerTitle.addEventListener("click", async function minusStorePage() {
+    $headerTitle.addEventListener("click", async function resetPage() {
       const data = await fetchGet(TOP_RATED_URL);
-      if (data.results.length !== 0) {
-        store.setState({ movieList: data.results, searchValue: "", page: 1 });
-      } else {
-        alert("해당하는 영화가 없습니다!");
-      }
+      store.setState({ movieList: data.results, searchValue: "", page: 1 });
     });
   }
 
