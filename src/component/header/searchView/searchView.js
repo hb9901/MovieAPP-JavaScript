@@ -2,6 +2,7 @@ import Component from "../../core/Component.js";
 import { store } from "../../../store/store.js";
 import fetchGet from "../../../utils/apis/fetchGet.js";
 import { SEARCH_URL } from "../../../../constants/constants.js";
+import { checkDataExists } from "../../../utils/functions/functions.js";
 
 export default class SearchView extends Component {
   template() {
@@ -18,14 +19,12 @@ export default class SearchView extends Component {
 
     $searchBtn.addEventListener("click", async function updateStore() {
       let data = await fetchGet(`${SEARCH_URL}&query=${$searchInput.value}`);
-      if (data.results.length !== 0) {
+      if (checkDataExists(data.results)) {
         store.setState({
           movieList: data.results,
           searchValue: $searchInput.value,
           page: 1
         });
-      } else {
-        alert("해당하는 영화가 없습니다!");
       }
     });
 

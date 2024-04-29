@@ -2,6 +2,7 @@ import { store } from "../../../store/store.js";
 import Component from "../../core/Component.js";
 import { SEARCH_URL, TOP_RATED_URL } from "../../../../constants/constants.js";
 import fetchGet from "../../../utils/apis/fetchGet.js";
+import { checkDataExists } from "../../../utils/functions/functions.js";
 
 export default class Pagination extends Component {
   template() {
@@ -25,19 +26,15 @@ export default class Pagination extends Component {
 
     $backBtn.addEventListener("click", async function minusStorePage() {
       let data = await fetchGet(URL + `&page=${backPage}`);
-      if (data.results.length !== 0) {
+      if (checkDataExists(data.results)) {
         store.setState({ movieList: data.results, page: backPage });
-      } else {
-        alert("해당하는 영화가 없습니다!");
       }
     });
 
     $nextBtn.addEventListener("click", async function plusStorePage() {
       let data = await fetchGet(URL + `&page=${nextPage}`);
-      if (data.results.length !== 0) {
+      if (checkDataExists(data.results)) {
         store.setState({ movieList: data.results, page: nextPage });
-      } else {
-        alert("해당하는 영화가 없습니다!");
       }
     });
   }
